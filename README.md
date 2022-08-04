@@ -1,3 +1,16 @@
+# Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+GAS_REPORT=true npx hardhat test
+npx hardhat node
+npx hardhat run scripts/deploy.js
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -5,6 +18,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+
+### Package installed in this project 
+
+@dev - the package are very important to installed in your project
+
+`npm i -D hardhat` (hardhat is the package that will allow you to interact with blockchain stuff)
+when it instlled, go to your terminal and run this command `npx hardhat`
+
+ `npm i @openzeppelin/contracts` 
+
+ `npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion` (Chakra is a library for styling)
 
 ### `npm start`
 
