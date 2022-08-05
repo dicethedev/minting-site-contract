@@ -30,6 +30,10 @@ when it instlled, go to your terminal and run this command `npx hardhat`
 
  `npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion` (Chakra is a library for styling)
 
+ `npm i -D dotenv` (useful for the .env in the project)
+
+ `npm i -D @nomiclabs/hardhat-etherscan` (Verify command for Hardhat package)
+
 ### `npm start`
 
 Runs the app in the development mode.\

@@ -1,6 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma soldity ^0.8.12;
-
+pragma solidity ^0.8.9;
 
 //@dev - imported file - contract that will enable for minting in this project
 import '@openzeppelin/contracts/token/ERC721/ERC721.sol';
@@ -22,7 +21,6 @@ contract DiceVerseNFT is ERC721, Ownable {
     totalSupply = 0;
     maxSupply = 1000;
     maxPerWalletBalance = 3;
-
     //@dev - set withdraw wallet address
   }
 
@@ -36,10 +34,10 @@ contract DiceVerseNFT is ERC721, Ownable {
   }
 
   //@dev - this tokenUrl exist in the ERC721. opensea for example will call this
-  //function to get the images
-  function tokenUrl(uint256 _tokenId) public view override returns(string memory) {
+  //function to get the images of the NFTs
+  function tokenUrl(uint256 _tokenId) public view returns(string memory) {
      require(_exists(_tokenId), 'Token does not exist!');
-     return string(abi.encodedPacked(baseTokenUrl,  Strings.toString(_tokenId), ".json"));
+     return string(abi.encodePacked(baseTokenUrl,  Strings.toString(_tokenId), ".json"));
   }
 
   function withdraw() external onlyOwner {
@@ -59,10 +57,10 @@ contract DiceVerseNFT is ERC721, Ownable {
     require(walletMintBalances[msg.sender] + _quantity <= maxPerWalletBalance, 'it exceed max wallet balance');
 
     //@dev - for loop to perform the minting
-    for(uint256 i=0; i < _quantity; i++) {
+    for(uint256 i = 0; i < _quantity; i++) {
       uint256 newTokenId = totalSupply + 1;
       totalSupply++;
-      //@dev - _safeMint is a function that exist in ERC721
+      //@dev - _safeMint is a function that exist in ERC721 on openzeppelin
       _safeMint(msg.sender, newTokenId);
     }
   }
