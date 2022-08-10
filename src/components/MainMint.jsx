@@ -47,10 +47,6 @@ const MainMint = ({ accounts, setAccounts }) => {
           setMintAmount(mintAmount + 1);
       };
 
-      const handleMintOperation = () => {
-
-      }
-
   return (
     <Flex justify="center" align="center" height="100vh" paddingBottom="150px">
      <Box width="520px">
@@ -110,7 +106,7 @@ const MainMint = ({ accounts, setAccounts }) => {
              fontFamily="inherit"
              padding="15px"
              margin="10px"
-           onClick={handleMintOperation}>Mint Now</Button>
+           onClick={handleMint}>Mint Now</Button>
         </div>
     ) : (
      <Text

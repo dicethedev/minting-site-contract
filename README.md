@@ -24,7 +24,8 @@ In the project directory, you can run:
 @dev - the package are very important to installed in your project
 
 `npm i -D hardhat` (hardhat is the package that will allow you to interact with blockchain stuff)
-when it instlled, go to your terminal and run this command `npx hardhat`
+when it instlled, go to your terminal and run this command `npx hardhat` and install this also
+`npm install --save-dev "hardhat@^2.10.1" "@nomicfoundation/hardhat-toolbox@^1.0.1`
 
  `npm i @openzeppelin/contracts` 
 
